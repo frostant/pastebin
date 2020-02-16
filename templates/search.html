@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Search</h3>
+<form method="post">
+    CodeID<br><input type="text" name="name" autocomplete="off" required value={{hash_key}}>
+    <input class="btn" type="submit" name="submit" value="search"><br><br>
+    {% if codes %}
+        Content<br>
+        <!-- <script type="text/javascript" src="highlight.pack.js"> -->
+            <pre class='hljs'><code>{{codes}}</code></pre>
+            <script>
+                hljs.initHighlightingOnLoad();    </script>
+    {% endif %}
+</form>
+{% endblock %}
+

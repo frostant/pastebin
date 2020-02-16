@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Paste</h3>
+<form method="post">
+    Poster<input type="text" name="name" autocomplete="off" required><br>
+    <!-- Content<input type="textarea" name="content" autocomplete="off" required 
+    style="height: 700px; width: 700px; " > -->
+    Content<textarea name="content" rows="20" cols="80" required>
+    </textarea></td></tr>
+    <input class="btn" type="submit" name="submit" value="save"><br>
+    <!-- {% if hash_key %}
+        the codeID is {{ hash_key_paste }}
+    {% endif %} -->
+</form>
+{% endblock %}
+
+
